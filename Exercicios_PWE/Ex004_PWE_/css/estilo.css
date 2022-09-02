@@ -1,0 +1,54 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: purple;
+    font-family:'Times New Roman', Times, serif
+}
+
+input:hover, textarea:hover, select:hover {
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+input {
+    background-color: rgba(128, 0, 128, 0.171);
+    font-size: 17px;
+}
+
+div {
+    height: 400px;
+    width: 450px;
+    background-color: rgba(102, 51, 153, 0.103);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.26);
+    margin: auto;
+    padding: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th{
+    background-color: rgba(155, 202, 255, 0.267);
+    color: rgba(255, 0, 149, 0.918);
+    font-family: algebrian;
+}
+
+td{
+    text-align: center;
+    color: rgb(247, 0, 255);
+    padding: 10px;
+}
+
+th, td {
+    padding: 15px;
+}
