@@ -6,43 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        img {
+            width: 250px;
+            height: 150px;
+            padding-top: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: 0.6px;
+            color: black;
+            margin: 0px 50px 0px;
+            text-align: justify;
+        }
+
+        .Pcadastro {
+            text-align: center;
+            padding-bottom: 12px;
+        }
+
+                    
+        input:hover, textarea:hover, select:hover {
+            background-color: rgba(128, 128, 128, 0.178);
+        }
+
+        label {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        input {
+            background-color: wite(128, 0, 128, 0);
+            font-size: 17px;
+        }
+
+        .cadastro {
+            height: auto;
+            width: 400px;
+            background-color: rgba(64, 255, 64, 0.151);
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.26);
+            margin: auto;
+            padding: 25px;
+            margin-bottom: 50px;
+        }
+
+        hr {
+            margin: 0%;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            font-size: 1.3em;
+        }
+    </style>
 </head>
 <body>
-    <img src="img/logo.png" alt="imagem da logo">
-    <hr>
-    <div>
-        <p>O setor de hortifruti – nosso carro-chefe – oferece uma grande variedade de <a href="index-2.html">frutas</a>, <a href="index-3.html">verduras</a>, e <a href="index-4.html">legumes</a>, entre escolhas nacionais e importadas, com o sabor e frescor de um produto recém-colhido. Não medimos esforços para disponibilizar apenas as melhores opções para você dividir bons momentos com a família.</p>
-    </div>
-    <h1>Cadastro</h1>
-    <div class="cadastro">
-        <form action="" method="get">
+    <div class="container">
+        <img src="img/logo-1.png" alt="imagem da logo">
+        <hr>
+        <div>
+            <p>O setor de hortifruti – nosso carro-chefe – oferece uma grande variedade de <a href="index-2.html">frutas</a>, <a href="index-3.html">verduras</a>, e <a href="index-4.html">legumes</a>, entre escolhas nacionais e importadas, com o sabor e frescor de um produto recém-colhido. Não medimos esforços para disponibilizar apenas as melhores opções para você dividir bons momentos com a família.</p>
+        </div>
+        <h1>Cadastro</h1>
+        <p class="Pcadastro">Cadastre-se para realizar compras</p>
+        <div class="cadastro">
+            <form action="" method="get">
+                <Label for="NomeCompleto">Nome:</Label>
+                <input type="text" name="NomeCompleto" id="NomeCompleto">
+                <br><br>
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email">
+                <br><br>
+                <label for="CPF">CPF:</label>
+                <input type="number" name="CPF" id="CPF">
+                <br><br>
         
-            <label for="Nome">Nome:</label>
-            <input type="text" name="Aluno" id="Aluno">
-            <br><br>
-
-            <label for="Email">Email:</label>
-            <input type="email" id="Email">
-            <br><br>
-
-            <label for="Senha">Senha:</label>
-            <input type="password" id="Senha">
-            
-            <br><br>
-
-            <label for="Nasc">Nascimento</label>
-            <input type="date" name="Nasc" id="Nasc">
-
-            <br><br>
+                <label for="Estado">Estado: </label>
+                <select name="Estado" id="Estado">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="BH">Belo Horizonte</option>
+                    <option value="BA">Bahia</option>
+                    <option value="PR">Paraná</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PI">Piauí</option>
+                </select>
+                <br><br>
+                <label for="Nasc">Nascimento</label>
+                <input type="date" name="Nasc" id="Nasc">
+                <br><br>
+                <label for="Genero">Genero:</label>
+                <input type="radio" name="Genero" id="Fem" value="F">Feminino
+                <input type="radio" name="Genero" id="Masc" value="M">Masculino
         
-            <label for="Genero">Genero:</label>
-            <input type="radio" name="Genero" id="Fem" value="F">Feminino
-            <input type="radio" name="Genero" id="Masc" value="M">Masculino
+                <br><br>
+                <label for="Atividades">Pretende comprar?</label>
+                <input type="checkbox" name="Atividades" id="Esportes" value="E">Frutas
+                <input type="checkbox" name="Atividades" id="Musica" value="M">Verduras
+                <input type="checkbox" name="Atividades" id="Leitura" value="L">Legumes
+                <br><br>
+                <label for="Comentarios">Comentarios</label>
+                <br>
         
-            <br><br>
-            <input type="submit" value="Entrar" name="Botao" id="Enviar">
-            <input type="submit" value="Cadastrar" name="Botao" id="Pesquisar">
-        </form>
+                <textarea name="Comentarios" id="Comentarios" cols="30" rows="4"></textarea>
+        
+                <br><br>
+                <input type="submit" value="Cadastrar" name="Botao" id="Cadastrar">
+            </form>
+        </div>
     </div>
 </body>
 </html>
