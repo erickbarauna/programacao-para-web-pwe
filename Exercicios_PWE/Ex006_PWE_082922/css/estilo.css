@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 80vh;
+    max-width: 80vh;
     background-color: rgb(255, 255, 255);
     margin-right: auto;
     margin-left: auto;
@@ -40,6 +40,9 @@ a:hover {
 
 table {
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 tr:nth-child(odd) {
@@ -53,10 +56,5 @@ th {
 th, td {
     padding: 12px;
     width: 200px;
-}
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
+    
 }
