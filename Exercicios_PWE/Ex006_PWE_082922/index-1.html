@@ -7,6 +7,12 @@
     <title>Principal</title>
     <link rel="stylesheet" href="css/estilo.css">
     <style>
+        body {
+            background: black url(img/walpapper2.jpg) center center no-repeat fixed;
+            background-size: cover;
+            backdrop-filter: blur(0px);
+        }
+
         img {
             height: 180px;
             padding-top: 15px;
@@ -28,36 +34,46 @@
 
                     
         input:hover, textarea:hover, select:hover {
-            background-color: rgba(128, 128, 128, 0.178);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.452);
         }
 
         label {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
             font-weight: bold;
         }
 
+
         input {
             background-color: wite(128, 0, 128, 0);
-            font-size: 17px;
+            border-radius: 6px;
+            border: none;
+            align-items: center;
+            font-size: 1rem;
+            padding: 7px;
+        }
+
+        #CPF {
+            margin-left: 11px;
         }
 
         .cadastro {
             height: auto;
             max-width: 400px;
-            background-color: rgba(64, 255, 64, 0.151);
-            text-align: center;
+            background-color: rgb(50, 158, 50);
             border-radius: 8px;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.26);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.692);
             margin: auto;
             padding: 25px;
             margin-bottom: 50px;
+            color: white;
         }
 
         hr {
             margin: 0%;
             margin-bottom: 30px;
             margin-top: 20px;
+            border-color: rgb(87, 196, 53);
         }
 
         h1 {
@@ -66,6 +82,24 @@
 
         a {
             font-size: 1.3em;
+        }
+
+        select {
+            border: none;
+            border-radius: 5px;
+            padding: 7px;
+            width: 150px;
+        }
+
+        textarea {
+            border: none;
+            border-radius: 6px;
+        }
+
+        #Cadastrar {
+            width: 120px;
+            height: 35px;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -104,7 +138,7 @@
                 <label for="Nasc">Nascimento</label>
                 <input type="date" name="Nasc" id="Nasc">
                 <br><br>
-                <label for="Genero">Genero:</label>
+                <label for="Genero">Gênero:</label>
                 <input type="radio" name="Genero" id="Fem" value="F">Feminino
                 <input type="radio" name="Genero" id="Masc" value="M">Masculino
         
