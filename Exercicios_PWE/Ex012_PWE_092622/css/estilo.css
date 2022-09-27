@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(255, 191, 255, 0.521);
+    
+}
+
+h1{
+    color: rgb(255, 0, 157);
+    font-family: cursive;
+    
+}
+
+img{
+    border: 5px;
+    border-style:groove;
+    border-color: rgba(225, 0, 255, 0.589);
+}
+
