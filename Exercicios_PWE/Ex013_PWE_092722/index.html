@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula dia 27/09</title>
+    <!--<script src="js/script.js"></script>-->
+    <script>
+        function Botao() {
+            var nomePet = document.getElementById("NomePet").value;
+            var NascPet = document.getElementById("NascPet").value;
+            var BanhoPet = document.getElementById("BanhoPet").value;
+            var TosaPet = document.getElementById("TosaPet").value;
+            var ConsulPet = document.getElementById("ConsulPet").value;
+            var Total = BanhoPet + TosaPet + ConsulPet;
+
+            alert();
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Olá Bobinho  </h1>
+
+    <hr>
+   
+    <form name="FormPets">
+        <label for="NomePet">Nome do Pet: </label>
+        <input type="text" name="NomePet" id="NomePet">
+
+        <br>
+
+        <label for="NascPet">Data de Nascimento: </label>
+        <input type="date" name="NascPet" id="NascPet">
+
+        <br><br>
+
+        <label for="Serv">Serviço</label>
+
+        <br>
+
+        <label for="BanhoPet">Banho: </label>
+        <input type="number" name="BanhoPet" id="BanhoPet" placeholder="R$">
+
+        <br>
+
+        <label for="TosaPet">Tosa: </label>
+        <input type="number" name="TosaPet" id="TosaPet" placeholder="R$">
+
+        <br>
+
+        <label for="ConsulPet">Consulta: </label>
+        <input type="number" name="ConsulPet" id="ConsulPet" placeholder="R$">
+
+        <br>
+
+    </form>
+    
+    <input type="button" value="Recibo" id="Botao" onClick="Botao();">
+    
+    <div id="ReciboPet">
+
+    </div>
+</body>
+</html>
