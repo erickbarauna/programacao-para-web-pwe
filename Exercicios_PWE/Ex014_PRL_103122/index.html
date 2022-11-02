@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Front End</h1>
+    <form action="vendas.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Cadastro</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+            <p>
+                <label for="inasc">Nasc: </label>
+                <input type="date" name="nasc" id="inasc" required>
+            </p>
+            <p>
+                <label for="igen">Genero: </label>
+                <input type="radio" name="gen" id="masc" value="M" required>Masculino
+                <input type="radio" name="gen" id="femi" value="F" required>Feminino
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Venda</legend>
+            <p>
+                <label for="iprod">Produto</label>
+                <input type="text" name="prod" id="iprod" required>
+            </p>
+            <p>
+                <label for="ivalor">Valor</label>
+                <input type="number" name="valor" id="ivalor" required>
+            </p>
+            <p>
+                <input type="submit" value="Enviar" id="enviar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
