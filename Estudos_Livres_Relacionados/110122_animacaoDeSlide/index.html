@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flipDown").click(function(){
+                $("#painel").slideDown(1500);
+            });
+            $("#flipUp").click(function(){
+                $("#painel").slideUp(1500);
+            });
+            $("#stop").click(function(){
+                $("#painel").stop();
+            });
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #flipDown {
+            padding: 5px; font-size: 18px; text-align: center; background-color: #555; color: #fff; border: 1px solid #666; border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #painel {
+            padding: 5px; font-size: 18px; text-align: center; background-color: #555; color: #fff; border: 1px solid #666; border-radius: 3px;
+        }
+
+        #flipUp {
+            padding: 5px; font-size: 18px; text-align: center; background-color: #555; color: #fff; border: 1px solid #FFF; border-radius: 3px;
+            cursor: pointer;
+            bottom: 0;
+            margin-top: 100px;
+        }
+
+        #painel {
+            padding: 50px 100px; display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animação de Slide</h1>
+
+    <button id="stop">Pare a movimentação</button>
+
+    <div id="flipDown">Clique aqui para descer</div>
+    <div id="painel">
+        <h2>Painel de textos/imagens</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi obcaecati illum suscipit repellendus earum molestiae soluta a veniam incidunt commodi culpa totam laudantium laborum, blanditiis adipisci tempora praesentium qui mollitia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, quis eos commodi nulla saepe placeat dolorum est qui possimus mollitia consectetur modi, magni id veritatis vel assumenda quia maxime necessitatibus.</p>
+        <div id="flipUp">Clique aqui para subir</div>
+    </div>
+    
+</body>
+</html>
