@@ -5,29 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aulinha de hoje</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .container {
+            display: inline-block;
+            text-align: end;
+            margin-bottom: 20px;
+        }
+
+        .input:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            border-radius: 7px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.202);
+        }
+    </style>
 </head>
 <body>
     <h1>Testes PHP</h1>
-    <form action="produto.php" method="get">
-        <fieldset>
-            <legend>Produto</legend>
-            <p>
-                <label for="icodp">Código Produto: </label>
-                <input type="number" name="codp" id="icodp">
-            </p>
-            <p>
-                <label for="idesc">Descrição: </label>
-                <input type="text" name="desc" id="idesc">
-            </p>
-            <p>
-                <label for="ivalor">Valor: </label>
-                <input type="number" name="valor" id="ivalor">
-            </p>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="button" id="pesquisar" value="Pesquisar" onclick="Pesquisar()">
-            </p>
-        </fieldset>
-    </form>
+    <div class="container">
+        <form id="cadastro" action="" method="post">
+            <fieldset>
+                <legend>Produto</legend>
+                <div class="input">
+                    <label for="icodp">Código Produto: </label>
+                    <input type="number" name="codp" id="icodp">
+                </div>
+                <div class="input">
+                    <label for="idesc">Descrição: </label>
+                    <input type="text" name="desc" id="idesc">
+                </div>
+                <div class="input">
+                    <label for="ivalor">Valor: </label>
+                    <input type="number" name="valor" id="ivalor">
+                </div>
+                <div class="input">
+                    <input type="submit" value="Enviar">
+                    <input type="button" id="pesquisar" value="Pesquisar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="resposta">
+        Aqui vai a resposta do PHP com Ajax
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#pesquisar').click(function() {
+                var dados = $('#cadastro').serialize();
+
+                $.ajax({
+                    method: 'POST',
+                    url: 'produto.php',
+                    data: dados,
+
+                    beforeSend: function() {
+                        $("#resposta").html("Carregando...")
+                    }
+                })
+
+                .done(function(msg) {
+                    $("h2").hmtl("Dados da Pesquisa...")
+
+                    var Produto = JSON.parse(msg);
+
+                    var Bloco = '';
+                    Bloco += "Codigo Produto: " + Produto.Codigo + "<br>";
+                    Bloco += "Descricao: " + Produto.Descricao + "<br>";
+                    Bloco += "Valor: " + Produto.Valor + "<br>";
+                    Bloco += "<hr>";
+
+                    $("#resposta").append(Bloco);
+                })
+
+                .fail(function() {
+                    alert("Falha ao Carregar")
+                })
+
+                return false;
+            })
+        })
+    </script>
 </body>
 </html>
